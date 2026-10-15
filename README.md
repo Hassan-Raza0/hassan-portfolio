@@ -219,3 +219,6 @@ Computer Science Graduate | AI & Software Development
 
 **GitHub:**
 https://github.com/Hassan-Raza0
+
+**LinkedIn:**
+https://www.linkedin.com/in/hassan-raza-soomro-a11496192/

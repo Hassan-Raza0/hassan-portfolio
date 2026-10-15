@@ -21,6 +21,14 @@ function Contact() {
         >
           GitHub
         </a>
+
+        <a
+          href="https://www.linkedin.com/in/hassan-raza-soomro-a11496192/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
     </section>
   );
