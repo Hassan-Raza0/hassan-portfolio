@@ -195,6 +195,18 @@ function Home() {
         </Link>
       </section>
 
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Updates</p>
+          <h2>Notes and capstone work</h2>
+        </div>
+
+        <p>
+          This space is for short posts and the FlyRank capstone. The official
+          completion badge will be added here after that capstone is approved.
+        </p>
+      </section>
+
       <section className="home-section contact-prompt">
         <div>
           <p className="eyebrow">Open to Opportunities</p>

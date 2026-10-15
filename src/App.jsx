@@ -9,6 +9,7 @@ import FlyRankCaseStudy from "./pages/FlyRankCaseStudy";
 import SmartDocumentCaseStudy from "./pages/SmartDocumentCaseStudy";
 import SentiAwareCaseStudy from "./pages/SentiAwareCaseStudy";
 import Contact from "./pages/Contact";
+import Cv from "./pages/Cv";
 import NotFound from "./pages/NotFound";
 import "./App.css";
 
@@ -39,6 +40,7 @@ function App() {
           />
 
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cv" element={<Cv />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

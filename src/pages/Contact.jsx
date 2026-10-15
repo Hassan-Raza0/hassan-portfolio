@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Contact() {
   return (
     <section className="page-section">
@@ -28,6 +30,12 @@ function Contact() {
           rel="noreferrer"
         >
           LinkedIn
+        </a>
+
+        <Link to="/cv">CV</Link>
+
+        <a href="mailto:hassansoomroraza@gmail.com?subject=Booking%20a%20conversation%20with%20Hassan%20Raza">
+          Book a conversation
         </a>
       </div>
     </section>
