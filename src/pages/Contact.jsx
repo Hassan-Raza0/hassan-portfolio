@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/hassansoomroraza@gmail.com";
@@ -9,9 +9,12 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("idle");
   const [notice, setNotice] = useState("");
+  const sendingRef = useRef(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (sendingRef.current) return;
+
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
@@ -28,6 +31,13 @@ function Contact() {
       return;
     }
 
+    if (trimmedMessage.length > 2000) {
+      setStatus("error");
+      setNotice("Keep the message under 2,000 characters.");
+      return;
+    }
+
+    sendingRef.current = true;
     setStatus("sending");
     setNotice("");
 
@@ -75,6 +85,8 @@ function Contact() {
           ? error.message
           : "The message did not send. Try again, or email hassansoomroraza@gmail.com.",
       );
+    } finally {
+      sendingRef.current = false;
     }
   }
 
