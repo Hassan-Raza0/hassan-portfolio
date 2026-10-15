@@ -304,6 +304,61 @@
   text-decoration: underline;
 }
 
+.contact-form {
+  display: grid;
+  gap: 16px;
+  max-width: 560px;
+  margin-top: 28px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: #111827;
+  font: inherit;
+  font-weight: 400;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  width: fit-content;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.form-notice {
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-notice.success {
+  color: #0f766e;
+}
+
+.form-notice.error {
+  color: #b91c1c;
+}
+
 .contact-list {
   display: flex;
   flex-wrap: wrap;
