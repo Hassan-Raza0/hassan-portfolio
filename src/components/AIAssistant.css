@@ -1,0 +1,476 @@
+/* Exact Fiverr (Forethought) Layout with Hassan Raza's SA Logo Blue Palette */
+
+.ai-floating-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  font-family: inherit;
+}
+
+/* Floating Toggle Button - Hassan Raza Brand Blue */
+.ai-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35),
+              0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ai-toggle-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
+}
+
+.ai-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.ai-button-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+/* Fiverr-Style Modal Card */
+.ai-chat-window {
+  position: absolute;
+  bottom: 64px;
+  right: 0;
+  width: min(390px, calc(100vw - 32px));
+  height: 560px;
+  max-height: calc(100vh - 100px);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15),
+              0 4px 12px -2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fiverr-window-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fiverr-window-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header (White, minimalist, SA blue logo badge) */
+.ai-chat-header {
+  padding: 16px 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+}
+
+.ai-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hassan Raza's SA Logo Badge in Header */
+.ai-fiverr-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.ai-header-left h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-icon-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ai-icon-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.ai-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Center Notice / Disclaimer Text */
+.ai-disclaimer {
+  padding: 8px 32px 16px;
+  text-align: center;
+  font-size: 0.84rem;
+  color: #64748b;
+  line-height: 1.5;
+  border-bottom: 1px solid #f8fafc;
+}
+
+/* Chat Messages Stream */
+.ai-chat-messages {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #ffffff;
+}
+
+.ai-chat-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ai-chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ai-chat-messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Clean Airy Bubbles */
+.ai-message-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 88%;
+}
+
+.ai-message-wrapper.user {
+  align-self: flex-end;
+}
+
+.ai-message-wrapper.assistant {
+  align-self: flex-start;
+}
+
+.ai-bubble {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.ai-message-wrapper.user .ai-bubble {
+  background: #2563eb;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-message-wrapper.assistant .ai-bubble {
+  background: #f8fafc;
+  color: #1e293b;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #f1f5f9;
+}
+
+/* Clean Formatted Markdown in Chat Bubbles */
+.ai-msg-heading {
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: #0f172a;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.ai-msg-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 10px 0;
+}
+
+.ai-msg-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 5px 0;
+  padding-left: 2px;
+}
+
+.ai-bullet-icon {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.ai-bullet-text {
+  flex: 1;
+  line-height: 1.45;
+}
+
+.ai-msg-line {
+  line-height: 1.55;
+  margin: 3px 0;
+}
+
+.ai-msg-spacer {
+  height: 8px;
+}
+
+.ai-bold {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.ai-msg-link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.ai-msg-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Sleek Quick Suggestions inside stream */
+.ai-quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.ai-quick-btn {
+  padding: 6px 13px;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ai-quick-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+/* Scroll-down button bar above input */
+.ai-chat-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4px 20px 2px;
+  background: #ffffff;
+}
+
+.ai-corner-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: -0.03em;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.ai-scroll-down-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ai-scroll-down-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Exactly Fiverr's Input Pill Box */
+.ai-chat-input-area {
+  padding: 8px 18px 6px;
+  background: #ffffff;
+}
+
+.ai-fiverr-input-pill {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #475569;
+  border-radius: 999px;
+  padding: 6px 8px 6px 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ai-fiverr-input-pill:focus-within {
+  border-color: #0f172a;
+}
+
+.ai-fiverr-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.92rem;
+  color: #0f172a;
+  outline: none;
+  padding: 4px 0;
+}
+
+.ai-fiverr-input::placeholder {
+  color: #64748b;
+}
+
+.ai-input-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-send-plane {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ai-send-plane.active {
+  color: #2563eb;
+}
+
+.ai-send-plane:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.ai-send-plane svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Fiverr Footer Note */
+.ai-fiverr-footer {
+  text-align: center;
+  padding: 4px 0 14px;
+  background: #ffffff;
+  font-size: 0.74rem;
+  color: #64748b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ai-fiverr-footer svg {
+  width: 13px;
+  height: 13px;
+  fill: #64748b;
+}
+
+/* Typing indicator */
+.ai-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+}
+
+.ai-typing-dot {
+  width: 6px;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 50%;
+  animation: fiverr-dot-bounce 1.3s infinite ease-in-out both;
+}
+
+.ai-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.ai-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes fiverr-dot-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1.1); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .ai-floating-container {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .ai-chat-window {
+    width: calc(100vw - 32px);
+    height: 500px;
+    bottom: 56px;
+  }
+}
